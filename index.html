@@ -1,0 +1,428 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<html>
+	<head>
+		<title>Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+/* About Me and Work Experience Section Styling */
+#about, #experience {
+				background-color: #f9f9f9; /* Matching light background */
+				padding: 2rem;
+				border-radius: 10px;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				margin-bottom: 2rem;
+			}
+
+			#about h2, #experience h2 {
+				font-size: 2.5em;
+				color: #333333;
+				margin-bottom: 1rem;
+				text-align: center;
+			}
+
+			#about p, #experience p {
+				font-size: 1.1em;
+				line-height: 1.8;
+				color: #555555;
+				margin-bottom: 1.5rem;
+				text-align: justify;
+			}
+
+			#about .highlight, #experience .highlight {
+				background-color: #333333;
+				color: #ffffff;
+				padding: 0.2rem 0.5rem;
+				border-radius: 5px;
+				font-weight: bold;
+			}
+
+			.work-experience-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.work-experience-box {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for a modern look */
+    text-align: left;
+}
+
+.work-experience-box h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.work-experience-box p {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.work-experience-box ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+/* Apply the same intro background styling for skills */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Keep the same three-column layout */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-box {
+    background: #333333; /* Dark background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center; /* Center-aligns the text */
+    display: flex; /* Flexbox for centering */
+    flex-direction: column; /* Keep content in column order */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+}
+
+.skill-box h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.skill-box p {
+    color: white;
+    line-height: 1.6;
+    text-align: center;
+}
+
+			/* Contact Section Styling */
+			#contact {
+				text-align: center;
+				padding: 3rem;
+				background-color: #f9f9f9;
+				border-radius: 10px;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				margin-top: 2rem;
+			}
+
+			#contact h2 {
+				font-size: 2.5em;
+				margin-bottom: 1rem;
+				color: #002d62;
+			}
+
+			.contact-icons {
+				display: flex;
+				justify-content: space-evenly;
+				margin-top: 2rem;
+			}
+
+			.contact-icons div {
+				text-align: center;
+			}
+
+			.contact-icons a {
+				display: inline-block;
+				background-color: #002d62;
+				color: white;
+				font-size: 1.5em;
+				padding: 1.5rem;
+				border-radius: 50%;
+				text-decoration: none;
+				transition: transform 0.3s ease;
+			}
+
+			.contact-icons a:hover {
+				transform: scale(1.15);
+				background-color: #0056b3;
+			}
+
+			.contact-icons p {
+				margin-top: 0.5rem;
+				color: #555;
+				font-size: 1.1em;
+			}
+
+			/* Floating Social Icons */
+			#floating-socials {
+				position: fixed;
+				top: 20%;
+				left: 10px;
+				display: flex;
+				flex-direction: column;
+				gap: 15px;
+				z-index: 1000;
+			}
+
+			/* Floating Social Icons */
+			#floating-socials {
+				position: fixed;
+				top: 50%;
+				left: 15px;
+				transform: translateY(-50%);
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				z-index: 1000;
+			}
+
+			#floating-socials a {
+    display: inline-block;
+    background-color: white;
+    color: #555;
+    font-size: 1.5em;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#floating-socials a:hover {
+    transform: scale(1.1);
+    background-color: #555;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+/* Add hover effect */
+.work-experience-box {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-experience-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Scroll animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.work-experience-box {
+    animation: fadeIn 0.5s ease-in-out;
+    animation-delay: var(--delay);
+    animation-fill-mode: both;
+}
+
+/* Custom delay for each box */
+.work-experience-box:nth-child(1) { --delay: 0.2s; }
+.work-experience-box:nth-child(2) { --delay: 0.4s; }
+.work-experience-box:nth-child(3) { --delay: 0.6s; }
+.work-experience-box:nth-child(4) { --delay: 0.8s; }
+
+
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>Hi, I am<br />
+						Somaya Sharma</h1>
+						<p>Business Analyst | Data Enthusiast | MSc, Business Analytics</p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+						<p>
+							<a href="Somaya_Sharma_Business_Analyst_CV.pdf" download class="button">Download My CV</a>
+						</p>
+					</div>
+					<!-- Floating Social Icons -->
+					<div id="floating-socials">
+						<a href="https://github.com/somayasharma" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a>
+						<a href="https://www.linkedin.com/in/saumyagieni" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a>
+						<a href="mailto:somaya.sharma6599@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a>
+					</div>
+
+					
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Somaya Sharma</a>
+					</header>
+
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="#intro">Home</a></li>
+							<li><a href="#about">About Me</a></li>
+							<li><a href="#experience">Work Experience</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<article class="post featured" id="about">
+							<header class="major">
+								<h2>About Me</h2>
+								<p>
+									I am a <span class="highlight">results-driven Business Analyst</span> with a passion for turning data into actionable strategies. With expertise in 
+									SQL, Python, Power BI, and Tableau, I excel in analyzing complex data to uncover valuable insights that guide business success.
+								</p>
+								<p>
+									Holding an <span class="highlight">MSc in Business Analytics</span> from Loughborough University, I bring a blend of technical expertise and 
+									business acumen to every project I undertake. My approach is collaborative, and I thrive in environments where innovation and data-driven decision-making are valued.
+								</p>
+								<p>
+									When I'm not crunching numbers or designing dashboards, you’ll find me exploring new trends in data analytics and finding ways to apply them for measurable impact.
+								</p>
+							</header>
+						</article>
+							<!-- skills -->
+							<article class="post featured" id="skills">
+								<header class="major">
+									<h2>Skills</h2>
+								</header>
+								<div class="skills-container">
+									<div class="skill-box">
+										<h3>Data Visualization</h3>
+										<p>Tableau, Power BI,  Microsoft Excel</p>
+									</div>
+									<div class="skill-box">
+										<h3>Programming</h3>
+										<p>C++, SQL , Python</p>
+									</div>
+									<div class="skill-box">
+										<h3>Technologies</h3>
+										<p>SSIS, SSRS, MongoDB, Apache Airflow, Snowflake, Amazon S3</p>
+									</div>
+									<div class="skill-box">
+										<h3>Analysis</h3>
+										<p>Statistical Analysis, A/B Testing, Ad Hoc Analysis, Hypothesis Testing</p>
+									</div>
+									<div class="skill-box">
+										<h3>Forecasting</h3>
+										<p>Financial Modeling, Time Series Forecasting, Regression, Neural Networks, Decision Trees</p>
+									</div>
+									<div class="skill-box">
+										<h3>Management</h3>
+										<p>Business Reporting, Critical Thinking, Process Optimization, Stakeholder Management</p>
+									</div>
+							</div>
+						</article>
+						
+						
+
+						<!-- Work Experience -->
+						<article class="post featured" id="experience">
+							<header class="major">
+								<h2>Work Experience</h2>
+							</header>
+							<div class="work-experience-container">
+								<div class="work-experience-box">
+									<h3>Phat Buns, London</h3>
+									<p><strong>Intern | Jun 2024 - Dec 2024</strong></p>
+									<ul>
+										<li>Streamlined inventory management and developed KPI dashboards for operational efficiency and cost optimization.</li>
+									</ul>
+								</div>
+								<div class="work-experience-box">
+									<h3>IBM (Skills Build Platform)</h3>
+									<p><strong>Trainee | Jun 2023 - Sep 2023</strong></p>
+									<ul>
+										<li>Optimized user experience through data-driven analysis and trends, applying IBM Design Thinking principles as part of a dissertation project at Loughborough University.</li>
+									</ul>
+								</div>
+								<div class="work-experience-box">
+									<h3>Stanza Living</h3>
+									<p><strong>Sales Specialist | Jan 2022 - Aug 2022</strong></p>
+									<ul>
+										<li>Improved sales by 15% through market analysis and created dashboards for data-driven decision-making.</li>
+									</ul>
+								</div>
+								<div class="work-experience-box">
+									<h3>LIDO </h3>
+									<p><strong> Marketing Manager | Feb 2021 - Jan 2022</strong></p>
+									<ul>
+										<li>Led a team of 15 to optimize campaigns, increasing ROI by 15%, and implemented workflows for a 20% productivity boost.</li>
+									</ul>
+								</div>
+							</div>
+						</article>
+						
+</section>
+
+				
+
+<article class="post featured" id="contact">
+	<header class="major">
+		<h2>Contact Me</h2>
+	</header>
+	<div class="contact-form">
+		<form action="#" method="post">
+			<div class="fields">
+				<div class="field half">
+					<label for="name">Full Name</label>
+					<input type="text" name="name" id="name" placeholder="Your Name" required />
+				</div>
+				<div class="field half">
+					<label for="email">Email Address</label>
+					<input type="email" name="email" id="email" placeholder="Your Email" required />
+				</div>
+				<div class="field">
+					<label for="message">Message</label>
+					<textarea name="message" id="message" rows="4" placeholder="Type your message here" required></textarea>
+				</div>
+			</div>
+			<ul class="actions">
+				<li><input type="submit" value="Send" class="primary" /></li>
+			</ul>
+		</form>
+	</div>
+</article>
+
+</div>
+</body>
+</html>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
